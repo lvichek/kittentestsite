@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}
+add two numbers
+{% endblock%}
+
+{% block content %}
+<h1 style="background-color:LightGray;">add two numbers here</h1>
+<p>no</p>
+
+<!--
+<form action = "add">
+    enter first number : <input type = "text" name = "num1"><br>
+    enter second number : <input type = "text" name = "num2"><br>
+    <input type = "submit">
+</form>    
+-->
+
+<form action = "add_post" method = 'post'>
+
+    {% csrf_token %}
+
+    enter first number : <input type = "text" name = "num1"><br>
+    enter second number : <input type = "text" name = "num2"><br>
+    <input type = "submit">
+
+</form>   
+
+
+
+{% endblock%}
